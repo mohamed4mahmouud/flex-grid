@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .navbar {
+        padding-left: 10px;
+        padding-right: 10px;
+        display: flex;
+        background-color: #e8e8e8;
+      }
+      ul {
+        text-align: center;
+        list-style-type: none;
+        margin: 0;
+        padding-left: 0px;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+      }
+      a {
+        font-size: 18px;
+        text-decoration: none;
+        color: black;
+      }
+      @media screen and(max-width:768px) {
+        ul {
+          flex-direction: column;
+          align-items: center;
+          margin: 0;
+        }
+      }
+      .parent {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-size: 18px;
+      }
+      .child1,
+      .child2 {
+        display: flex;
+        flex-direction: column;
+        border: solid black 3px;
+        margin-right: 5px;
+        margin-top: 5px;
+        justify-content: center;
+        text-align: center;
+        width: 50%;
+      }
+
+      footer {
+        background-color: #e8e8e8;
+        margin-top: auto;
+        padding-top: 5px;
+      }
+
+      @media screen and (max-width: 768px) {
+        .parent {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contacts</a></li>
+      </ul>
+    </div>
+    <div class="parent">
+      <div class="child1">
+        <p>This is a flex item.</p>
+        <footer>Footer</footer>
+      </div>
+      <div class="child2">
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum, id.
+          Ratione vel voluptatum accusamus dolores, dolorem reprehenderit nam
+          error maiores sapiente ad eum. Quos in officiis, nulla provident animi
+          enim.
+        </p>
+        <footer>Footer</footer>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .grid {
+        background-color: #09c;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .parent {
+        display: grid;
+        grid-template-areas:
+          "child1 child2 child2"
+          "child1 child3 child4"
+          "child5 child5 child4";
+        transform: rotate(35deg);
+        text-align: center;
+        color: #ffff;
+        width: 500px;
+        height: 500px;
+        gap: 5px;
+      }
+
+      .child1 {
+        grid-area: child1;
+        background-color: black;
+      }
+      .child2 {
+        grid-area: child2;
+        background-color: black;
+      }
+      .child3 {
+        grid-area: child3;
+        background-color: black;
+      }
+      .child4 {
+        grid-area: child4;
+        background-color: black;
+      }
+      .child5 {
+        grid-area: child5;
+        background-color: black;
+      }
+
+      @media screen and(max-width:320px) {
+        .grid {
+          justify-content: flex-start;
+          background-color: #aaa;
+        }
+        .parent {
+          height: 100px;
+          width: 100px;
+          transform: rotate(0);
+          margin-left: 0px;
+        }
+      }
+
+      @media (min-width: 321px) and (max-width: 375px) {
+        .parent {
+          height: 250px;
+          width: 250px;
+          transform: rotate(10deg);
+          margin-left: 0px;
+        }
+      }
+      @media (min-width: 376px) and (max-width: 600px) {
+        .parent {
+          height: 300px;
+          width: 300px;
+          transform: rotate(20deg);
+          margin-left: 0px;
+        }
+      }
+      @media (min-width: 601px) and (max-width: 770px) {
+        .parent {
+          height: 400px;
+          width: 400px;
+          transform: rotate(35deg);
+          margin-left: 0px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid">
+      <div class="parent">
+        <div class="child1">1</div>
+        <div class="child2">2</div>
+        <div class="child3">3</div>
+        <div class="child4">4</div>
+        <div class="child5">5</div>
+      </div>
+    </div>
+  </body>
+</html>

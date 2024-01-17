@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .grid {
+        text-align: center;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        width: 100%;
+        height: 50vh;
+      }
+
+      header {
+        grid-column: 1/5;
+        display: flex;
+        background-color: #09c;
+        justify-content: center;
+        align-items: center;
+      }
+      .main {
+        grid-column: 2/4;
+        grid-row: 2/4;
+        background-color: rgb(144, 213, 34);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      footer {
+        grid-column: 1/5;
+        background-color: #09c;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .side-nav {
+        grid-row: 2/4;
+        grid-column: 1/2;
+        background-color: #b95f24;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .side-bar {
+        grid-column: 4/5;
+        grid-row: 2/4;
+        background-color: #b95f24;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      @media screen and (max-width: 992px) {
+        .grid {
+          grid-template-rows: repeat(5, 1fr);
+        }
+
+        header {
+          grid-row: 1/2;
+        }
+        .main,
+        .side-bar,
+        .side-nav,
+        footer,
+        header {
+          grid-column: 1/5;
+        }
+        .side-nav {
+          grid-row: 2/3;
+        }
+        .main {
+          grid-row: 3/4;
+        }
+        .side-bar {
+          grid-row: 4/5;
+        }
+      }
+      footer {
+        grid-column: 1/5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid">
+      <header class="head"><span>header</span></header>
+      <aside class="side-nav">SIDENAV</aside>
+      <aside class="side-bar">SIDEBAR</aside>
+      <div class="main">main</div>
+      <footer class="foot"><span>footer</span></footer>
+    </div>
+  </body>
+</html>
